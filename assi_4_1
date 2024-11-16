@@ -1,0 +1,28 @@
+import csv
+from os import write
+
+class Student:
+    def __init__(self,name,roll_number):
+        self.name=name
+        self.roll_number=roll_number
+    def save_data(self):
+        if self.name!="":
+            print(f"{self.name} yourname is added to the list")
+        else:
+            print("Error 404")
+            return 
+        
+        if(self.roll_number>0):
+            print(f"{roll_number} has been added to list")
+        else:
+            print("Error 404")
+            return
+
+
+students=[Student(input(""),2024225),Student(input(""),2024226)]
+
+with open ('Students.csv',mode='w',newline='')as file:
+    writer =csv.writer(file)
+    write.writerow(["Name","Roll-Number"])
+    for student in Student:
+        write.writerow([Student.name] ,[Student.roll_number])
